@@ -4,6 +4,7 @@ class Counter extends EventTarget {
     this.value = initialValue;
   }
 
+  // private method starts with "#"
   #emitChangeEvent() {
     this.dispatchEvent(new CustomEvent("valuechange", { detail: this.value }));
   }
